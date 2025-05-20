@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top right, #ffecd2, #fcb69f);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+#body {
+  min-height: 100vh;
+  overflow-y: auto; /* Supaya bisa discroll ke bawah */
+  background-color: #f5f5f5;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4757;
+}
+
+#pesan {
+  max-width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.balloons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.balloon {
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 45% 45%;
+  position: absolute;
+  bottom: -100px;
+  animation: floatUp 10s linear infinite;
+}
+
+
+.red { background: #ff6b6b; left: 10%; animation-delay: 0s; }
+.blue { background: #1e90ff; left: 30%; animation-delay: 2s; }
+.green { background: #2ed573; left: 50%; animation-delay: 4s; }
+.yellow { background: #feca57; left: 70%; animation-delay: 6s; }
+.pink { background: #ff0077; left: 90%; animation-delay: 8s; }
+.black{ background: #000000; right: 10%; animation-delay: 1s; }
+.purple { background: #e905e6; right: 30%; animation-delay: 3s; }
+.white { background: #ffffff; right: 50%; animation-delay: 5s; }
+.gold { background: #fecb00; right: 70%; animation-delay: 7s; }
+.lblue { background: #01dffc; right: 90%; animation-delay: 9s; }
+
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+.countdown {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ff4757;
+  margin-top: 20px;
+  animation: fadeInOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: scale(0.8); }
+  50%  { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+.bg-ultah {
+  background-image: url("assets/ultah1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Kontainer utama pesan */
+#pesan {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hadiah container */
+#hadiah-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tombol hadiah */
+#hadiahBtn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 3;
+  position: relative;
+}
+
+#hadiahBtn:hover {
+  background-color: #187bcd;
+}
+
+/* Gambar hadiah */
+#hadiah {
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.hadiah-img {
+  max-width: 90%;
+  height: auto;
+}
+
+.hadiah-img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Teks hadiah */
+.hadiah-text {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.hadiah-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: block;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+#hadiahBtn {
+  margin-top: 20px;
+}
